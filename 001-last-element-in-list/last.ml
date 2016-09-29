@@ -4,9 +4,10 @@
 let rec last lst =
   match lst with
     [] -> None
-  | h::t -> match t with
+  | h::t ->
+    match t with
       [] -> [h]
-    | hh::tt -> last t;;
+      | hh::tt -> last t;;
 
 (* [] -> None
    [a] -> [a]
