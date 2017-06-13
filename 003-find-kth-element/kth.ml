@@ -1,8 +1,6 @@
 (* Find the k'th element of a list. (easy) *)
 
-let rec kth l k =
-  if k <= 0
-  then []
-  else match l with
-    | [] -> []
-    | h::t -> if k = 1 then h else kth t (k - 1);;
+let rec at i l =
+  match l with
+  | [] -> None
+  | hd :: tl -> if i = 1 then Some hd else at (i - 1) tl;;
